@@ -1,0 +1,23 @@
+<%- include("partials/header", { title, activePage }) %>
+
+    <h1>
+        <%= title %>
+    </h1>
+
+    <div class="syntax-text-box">
+        <ul class="syntax-text">
+            <% topics.forEach(t=> { %>
+                <li>
+                    <%= t %>
+                </li>
+                <% }) %>
+        </ul>
+    </div>
+
+    <% if (topics.length>= 4) { %>
+        <p>You have enough topics for today.</p>
+        <% } else { %>
+            <p>Add more topics.</p>
+            <% } %>
+
+                <%- include("partials/footer") %>
